@@ -1,25 +1,36 @@
 package Main;
+                                     // 1. Clasa principală
 
 public class Vehicle {
 
     private String brand;   // String field
     private Engine engine;  // Class field
-    private boolean isON;   // primitive field
+    private int speed;   // primitive field
 
                                 //              Constructors                  //
 
 
     public Vehicle() {
-        this.isON = false;
+        this.engine = new Engine("No type");
     }
 
-    public Vehicle(String brand, Engine engine) {
+    public Vehicle(String brand) {
+
+        this(); // calls the default constructor, therefore it creates a "no type engine"
         this.brand = brand;
+        this.speed = 0;
+
+    }
+    public Vehicle(String brand, Engine engine) {
+
         this.engine = engine;
-        this.isON = false;
+        this.brand = brand;
+        this.speed = 0;
     }
 
-    //              Getters and setters                 //
+                            //              Getters and setters                 //
+
+
     public String getBrand() {
         return brand;
     }
@@ -36,14 +47,28 @@ public class Vehicle {
         this.engine = engine;
     }
 
-    public boolean isON() {
-        return isON;
+    public int getSpeed() {
+        return speed;
     }
 
-    public void setON(boolean ON) {
-        isON = ON;
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+                                                 //      ToString        //
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "brand='" + brand + '\'' +
+                ", engine=" + engine +
+                ", speed=" + speed +
+                '}';
     }
 
-                                   //          Methods             //
-    
+                                              //          Methods             //
+
+
+
+
+
 }
