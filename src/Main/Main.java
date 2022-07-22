@@ -1,5 +1,8 @@
 package Main;
-                                                     // 4. Clasa Main
+
+import com.google.gson.Gson;
+
+// 4. Clasa Main
 public class Main {
     public static void main(String[] args) {
         //          Primul subpunct
@@ -51,6 +54,19 @@ public class Main {
         car003.setNoOfSeats(9);
         car003.setTransmissionType("Automatic");
         System.out.println("Casted car003 of car001: " + car003);
+
+
+
+
+
+
+
+
+ // Off topic 22/07/2022 Json
+        // GSON example
+
+       // Gson gson = new Gson();
+       // System.out.println("\n\n\n" + gson.toJson(car003));
 
 
 
